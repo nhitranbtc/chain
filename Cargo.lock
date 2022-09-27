@@ -324,8 +324,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "aum-chain"
-version = "4.0.0-dev"
+name = "aum-node"
+version = "1.0.0"
 dependencies = [
  "aum-runtime",
  "clap",
@@ -369,7 +369,7 @@ dependencies = [
 
 [[package]]
 name = "aum-runtime"
-version = "4.0.0-dev"
+version = "1.0.0"
 dependencies = [
  "frame-benchmarking",
  "frame-executive",
@@ -4100,7 +4100,7 @@ dependencies = [
 
 [[package]]
 name = "pallet-template"
-version = "4.0.0-dev"
+version = "1.0.0"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
