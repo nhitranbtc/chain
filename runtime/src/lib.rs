@@ -93,8 +93,8 @@ pub mod opaque {
 // https://docs.substrate.io/main-docs/build/upgrade#runtime-versioning
 #[sp_version::runtime_version]
 pub const VERSION: RuntimeVersion = RuntimeVersion {
-	spec_name: create_runtime_str!("node-template"),
-	impl_name: create_runtime_str!("node-template"),
+	spec_name: create_runtime_str!("aum-network"),
+	impl_name: create_runtime_str!("aum-network"),
 	authoring_version: 1,
 	// The version of the runtime specification. A full node will not attempt to use its native
 	//   runtime in substitute for the on-chain Wasm runtime unless all of `spec_name`,
@@ -124,6 +124,15 @@ pub const SLOT_DURATION: u64 = MILLISECS_PER_BLOCK;
 pub const MINUTES: BlockNumber = 60_000 / (MILLISECS_PER_BLOCK as BlockNumber);
 pub const HOURS: BlockNumber = MINUTES * 60;
 pub const DAYS: BlockNumber = HOURS * 24;
+
+pub const TOKEN_DECIMALS: u32 = 18; // Change this if you use different decimals
+pub const TOKEN_SYMBOL: &str = "AUM";
+pub const MTS: Balance = UNITS;
+pub const UNITS: Balance = 10_u128.pow(TOKEN_DECIMALS);
+pub const MILLICENTS: Balance = CENTS / 1000;
+pub const CENTS: Balance = DOLLARS / 100; // assume this is worth about a cent.
+pub const DOLLARS: Balance = UNITS;
+pub const AUM: Balance = DOLLARS;
 
 /// The version information used to identify this runtime when compiled natively.
 #[cfg(feature = "std")]
